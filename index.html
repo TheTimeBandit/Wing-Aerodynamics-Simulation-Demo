@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | Wing Aerodynamics Simulation Demo</title>
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("instanceContainer", "Build/build.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body>
+    <div class="webgl-content">
+      <div id="instanceContainer" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+        <div class="title">Wing Aerodynamics Simulation Demo</div>
+		<div style="background-color: #dddddd;">
+			Up/Down arrows - change angle of flaps on main wings<br>
+			(recommended use on takeoff)<br>
+			W/S - pitch<br>
+			Q/E - yaw<br>
+			A/D - roll<br>
+			Space - start/stop engine<br>
+			C - change camera mode<br>
+			
+		</div>
+		<br>
+      </div>
+    </div>
+  </body>
+</html>
